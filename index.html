@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
-    <link rel="stylesheet" href="./assets/styles/style.css">
+    <link rel="stylesheet" href="./assets/styles/header.css">
+    <link rel="stylesheet" href="./assets/styles/hero.css">
     <title>Awax</title>
 </head>
 <body>
@@ -37,15 +38,49 @@
                     <a href="#">SOME FACTS</a>
                     <a href="#">CONTACT US</a>
                 </div>
-                <svg class="hamburguer" xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="#000000" viewBox="0 0 256 256"><path d="M208,32H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM192,184H64a8,8,0,0,1,0-16H192a8,8,0,0,1,0,16Zm0-48H64a8,8,0,0,1,0-16H192a8,8,0,0,1,0,16Zm0-48H64a8,8,0,0,1,0-16H192a8,8,0,0,1,0,16Z"></path></svg>
-                                
+                <svg class="hamburguer" xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="#000000" viewBox="0 0 256 256"><path d="M208,32H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM192,184H64a8,8,0,0,1,0-16H192a8,8,0,0,1,0,16Zm0-48H64a8,8,0,0,1,0-16H192a8,8,0,0,1,0,16Zm0-48H64a8,8,0,0,1,0-16H192a8,8,0,0,1,0,16Z"></path></svg>                                
             </div>
         </div>
     </nav>
-    <main></main>
+    <main>
+        <section id="hero" class="hero-banner">            
+            <div class="hero-slider">
+                <div class="slide">
+                    <div class="slide-area1">
+                        <h1>Design is about <br> <span>Communication</span></h1>
+                        <h2>Call Us: +00 0 1234 5678</h2>
+                        <button>Get in touch!</button>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="slide-area2">
+                        <h1>Design is about <br> <span>Solution</span></h1>
+                        <h2>Call Us: +00 0 1234 5678</h2>
+                        <button>Get in touch!</button>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="slide-area3">
+                        <h1>Design is about <br> <span>Creativitie</span></h1>
+                        <h2>Call Us: +00 0 1234 5678</h2>
+                        <button>Get in touch!</button>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-pointer">
+                <div class="active pointer1"></div>
+                <div class="pointer2"></div>
+                <div class="pointer3"></div>
+            </div>
+        </section>
+    </main>
     <footer></footer>
     <script>
         const menu = document.querySelector(".hamburguer");
+        const slider = document.querySelector(".hero-slider");
+        const slide1 = document.querySelector(".pointer1");
+        const slide2 = document.querySelector(".pointer2");
+        const slide3 = document.querySelector(".pointer3");
 
         menu.addEventListener("click", () => {
             if(document.querySelector(".menu-hamburguer").style.display == 'flex'){
@@ -54,6 +89,28 @@
                 document.querySelector(".menu-hamburguer").style.display = 'flex';
             }
         });  
+
+        slide1.addEventListener("click", () => {
+            slider.style.marginLeft = '0vw';
+            slide1.classList.add('active');
+            slide2.classList.remove('active');
+            slide3.classList.remove('active');
+        });  
+
+        slide2.addEventListener("click", () => {
+            slider.style.marginLeft = '-100vw';
+            slide1.classList.remove('active');
+            slide2.classList.add('active');
+            slide3.classList.remove('active');
+        });  
+
+        slide3.addEventListener("click", () => {
+            slider.style.marginLeft = '-200vw';
+            slide1.classList.remove('active');
+            slide2.classList.remove('active');
+            slide3.classList.add('active');
+        });  
+
     </script>
 </body>
 </html>

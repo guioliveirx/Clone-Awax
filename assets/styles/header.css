@@ -34,10 +34,12 @@ body{
 
 .awax-logo{
     width: 80px;
+    
 }
 
 .awax-logo > img{
     background-color: #B28756;
+    border-radius: 40px;
 }
 
 .awax-menu{
