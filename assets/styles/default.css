@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.default{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.default .section-title,
+.default .section-desc{
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.default .section-title h2{    
+    font-size: 1.5rem;
+}
+
+.default .section-desc h3{
+    font-size: 0.8rem;
+    margin: 12px 0px 40px 0px;
+    color: #ccc;
+}
+
+.default.light{
+    background-color: #f7f7f7;
+}
+
+.default.light .section-title{
+    color: #000;
+}
+
+.default.dark{
+    background-color: black;
+}
+
+.default.dark .section-title{
+    color: white;
+}
