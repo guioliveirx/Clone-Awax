@@ -2,3 +2,36 @@
     box-sizing: border-box;
 }
 
+.default .section-body{
+    display: flex;
+    column-gap: 20px;
+    padding: 10px;
+    max-width: 1140px;
+}
+
+.about-content > p{
+    line-height: 25px;
+    margin-bottom: 40px;
+}
+
+.about-content > a{
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    background-color: #B28756;
+    border-radius: 30px;
+    padding: 15px 55px;
+    transition: background-color 0.3s ease-out;
+}
+
+.about-content > a:hover{
+    color: black;
+    border: 1px solid rgb(0, 0, 0);
+    background-color: #ffffff00;
+}
+
+.about-image img{
+    width: 440px;
+    height: 270px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.555);
+}
