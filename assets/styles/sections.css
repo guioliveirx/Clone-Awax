@@ -4,6 +4,7 @@
 
 .default .section-body{
     max-width: 1140px;
+
 }
 
 .section-body .about-container{
@@ -17,17 +18,20 @@
     margin-bottom: 40px;
 }
 
-.about-content > a{
+.about-content > a,
+.ourProject-container > a{
     text-decoration: none;
     color: white;
     font-weight: 600;
     background-color: #B28756;
+    border: 1px solid #B28756;
     border-radius: 30px;
     padding: 15px 55px;
     transition: background-color 0.3s ease-out;
 }
 
-.about-content > a:hover{
+.about-content > a:hover,
+.ourProject-container > a:hover{
     color: black;
     border: 1px solid rgb(0, 0, 0);
     background-color: #ffffff00;
@@ -73,6 +77,100 @@
 }
 
 .services-highlights > p{
+    color: #ccccccde;
+    font-size: 0.8rem;
+}
+
+.ourProject-container{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 40px;
+    width: 100%;
+}
+
+.ourProject-options{
+    display: flex;
+    cursor: pointer;
+}
+
+.ourProject-options:hover > .options:hover{
+    border: 1px solid #B28756;
+    transform: translateY(-5px)
+}
+
+.ourProject-options:hover > :not(:hover){
+    opacity: 0.3;
+}
+
+.ourProject-options > .options{
+    border: 1px solid #ccc;
+    padding: 20px 20px;
+    transition: all 0.5s ease;
+}
+
+
+.ourProject-options div:first-child{
+    border-radius: 30px 0px 0px 30px;
+    padding-left: 40px;
+}
+.ourProject-options div:last-child{
+    border-radius: 0px 30px 30px 0px;
+    padding-right: 40px;
+}
+
+.ourProject-options > .options > span{
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.ourProject-gallery{
+    display: flex;
+    justify-content: center;
+    flex-flow: wrap;
+    column-gap: 40px;
+    row-gap: 40px;
+}
+
+.ourProject-gallery > .photos{
+    position: relative;
+    width: 250px;
+    height: 150px;
+    transition: all 1s ease;
+}
+
+.ourProject-gallery > .photos > .photo-info{
+    display: block;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 10px;
+    position: absolute;
+    background-color: transparent;
+    color: transparent;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: background-color 0.5s ease;
+}
+
+.ourProject-gallery > .photos:hover .photo-info > h2{
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.ourProject-gallery > .photos:hover .photo-info{
+    color: white;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.575);
+}
+
+.ourProject-gallery > .photos:hover .photo-info > p{
+    text-align: center;
     color: #ccccccde;
     font-size: 0.8rem;
 }
