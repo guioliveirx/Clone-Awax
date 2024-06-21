@@ -4,6 +4,7 @@
 
 .default{
     display: flex;
+    position: relative;
     flex-flow: column;
     justify-content: center;
     align-items: center;
@@ -15,6 +16,7 @@
 .default .section-desc{
     text-transform: uppercase;
     font-weight: 600;
+    z-index: 2;
 }
 
 .default .section-title h2{    
