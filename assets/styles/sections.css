@@ -285,6 +285,7 @@
 /* Happy Clients section */
 #happyClients{
     background-color: #f7f7f7;
+    overflow-x: hidden;
 }
 
 .happyclients-size{
@@ -347,15 +348,10 @@
 }
 
 /* Colaboradores */
-.bar{
-    width: 100vw;
-    height: 5px;
-    z-index: -999;
-    background-color: #f7f7f7;
-}
 #partness{
-    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.384);
-    z-index: 2;
+    position: relative;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.527);
+    z-index: 999;
 }
 
 .colab-container{
@@ -368,4 +364,356 @@
 
 .colab-container img{
     margin: 40px 0px;
+}
+
+/* Price section */
+#price{
+    background-color: #f7f7f7;
+}
+.price-container{
+    display: flex;
+    column-gap: 30px;
+}
+
+.price-card{
+    
+    width: 250px;
+    background: white;
+    padding: 30px;
+}
+
+.price-card h3,
+.price-card span,
+.price-card p,
+.price-card button,
+.price-card .price-bar{
+    margin: auto;
+    text-align: center;
+    border: 0px;
+}
+
+.price-card h3{
+    font-size: 1rem;
+}
+
+.price-card h3,
+.price-card span,
+.price-card button{
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.price-card span{
+    display: block;
+}
+
+.price-card .price-number{
+    margin-top: 20px;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.price-card .price-assing{
+    margin-bottom: 25px;
+    color: #818181;
+}
+
+
+.price-card p,
+.price-card .price-assing{
+    font-size: 0.8rem;
+}
+
+.price-card .price-bar{
+    border: 1px solid black;
+    width: 10px;
+}
+
+.price-card .price-bar,
+.price-card p{
+    color: #383838;
+    margin-top: 7px;
+}
+
+.price-card button{
+    display: block;
+    text-decoration: none;
+    background-color: #373737;
+    color: white;
+    font-weight: bold;
+    font-size: 0.9rem;
+    padding: 20px 40px;
+    margin-top: 30px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+}
+
+.price-card button:hover{
+    background-color: #B28756;
+}
+
+/* PREMIUM SECTION */
+.premium-container{
+    padding-bottom: 50px;
+    border-bottom: 1px solid #81818163;
+}
+
+.premium-container,
+.premium-container .img{
+    display: flex;
+    justify-content: center;
+}
+
+.premium-container .img,
+.premium-container .premium-content{
+    flex: 1;
+}
+
+.first-feature .feature-desc,
+.second-feature .feature-desc{
+    margin: 0px 0px 30px 30px;
+}
+
+.third-feature .feature-desc{
+    margin-left: 30px;
+}
+
+.first-feature,
+.second-feature,
+.third-feature{
+    display: flex;
+}
+
+.first-feature h3,
+.second-feature h3,
+.third-feature h3,
+.premium a{
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.first-feature p,
+.second-feature p,
+.third-feature p{
+    color: #818181;
+    font-size: 0.9rem;
+    line-height: 20px;
+    margin-top: 10px;
+}
+
+.premium{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.premium a{
+    text-decoration: none;
+    font-size: 0.9rem;
+    color: white;
+    padding: 15px 55px;
+    margin-top: 40px;
+    border: 1px solid #B28756;
+    border-radius: 30px;
+    background-color: #B28756;
+    transition: background-color 0.5s ease;
+}
+
+.premium a:hover{
+    color: black;
+    border: 1px solid rgb(0, 0, 0);
+    background-color: #ffffff00;
+}
+
+/* SOME FACTS */
+.somefacts-container,
+.somefacts-content,
+.somefacts-desc{
+    display: flex;
+}
+
+.somefacts-container{
+    column-gap: 100px;
+    margin-bottom: 40px;
+}
+.somefacts-content{
+    flex: 1;
+    row-gap: 10px;  
+}
+
+.somefacts-content,
+.somefacts-desc{
+    flex-flow: column;
+}
+
+.somefacts-desc{
+    flex: 1;
+    color: white;
+}
+
+.somefacts-desc span,
+.somefacts-bar{
+    font-size: 2.7rem;
+    font-weight: bold;
+    margin: auto;
+    color: #B28756;
+}
+
+.somefacts-bar{
+    width: 20px;
+    border: 1px solid #818181;
+}
+
+.somefacts-desc h3{
+    font-size: 1.1rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.somefacts-desc p{
+    font-size: 0.9rem;
+    line-height: 20px;
+    text-align: center;
+    color: #ccc;
+}
+
+/* SOCIAL */
+#social{
+    position: relative;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.527);
+    z-index: 999;
+}
+
+.social-container,
+.social-share,
+.social-content,
+.social-medias,
+.social-medias span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-container{
+    padding: 30px;
+    column-gap: 60px;
+}
+
+.social-share{
+    column-gap: 15px;
+}
+
+.social-share > img{
+    cursor: pointer;
+}
+
+.social-content{
+    column-gap: 35px;
+}
+
+.social-medias{
+    column-gap: 10px;
+}
+
+.social-medias > .tt,
+.social-medias > .lkdin,
+.social-medias > .face,
+.social-medias > .gplus,
+.social-medias > .pint{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.social-medias > .tt{
+    background-color: #33c4f0;
+}
+
+.social-medias > .lkdin{
+    background-color: #127db5;
+}
+
+.social-medias > .face{
+    background-color: #336296;
+}
+
+.social-medias > .gplus{
+    background-color: #e64238;
+}
+
+.social-medias > .pint{
+    background-color: #b81c29;
+}
+
+/* FORMS CONTACT US */
+.contactus-container,
+.contactus-container form .dados,
+.contactus-container form .send-messages{
+    display: flex;
+}
+
+.contactus-container,
+.contactus-container form .send-messages{
+    flex-flow: column;
+}
+
+.contactus-container{
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.contactus-container form{
+    width: 600px;
+}
+
+.contactus-container form .dados{
+    column-gap: 30px;
+    margin-bottom: 40px;
+}
+
+.contactus-container form .dados input{
+    flex: 1;
+}
+
+.contactus-container form .send-messages{
+    flex-direction: column;
+    row-gap: 90px;
+}
+
+input#iname,
+input#iemail,
+input#isubject,
+input#imessage{
+    padding: 15px 0px;
+    border: 0;
+    border-bottom: 2px solid #aeaeae;
+}
+
+input::placeholder{
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+
+.contactus-container > a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: white;
+    padding: 15px 55px;
+    margin-top: 50px;
+    border: 1px solid #B28756;
+    border-radius: 30px;
+    background-color: #B28756;
+    transition: background-color 0.5s ease;
+}
+
+.contactus-container > a:hover{
+    color: black;
+    border: 1px solid rgb(0, 0, 0);
+    background-color: #ffffff00;
 }
