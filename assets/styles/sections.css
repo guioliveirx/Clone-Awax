@@ -4,13 +4,12 @@
 
 .default .section-body{
     max-width: 1140px;
-    z-index: 2;
 }
 
 .section-body .about-container{
     display: flex;
     column-gap: 20px;
-    padding: 10px;
+    padding: 20px;
 }
 
 .about-content > p{
@@ -359,7 +358,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 1140px;
+    max-width: 1140px;
 }
 
 .colab-container img{
@@ -697,7 +696,6 @@ input::placeholder{
     font-weight: 400;
 }
 
-
 .contactus-container > a{
     text-decoration: none;
     text-transform: uppercase;
@@ -716,4 +714,48 @@ input::placeholder{
     color: black;
     border: 1px solid rgb(0, 0, 0);
     background-color: #ffffff00;
+}
+
+
+/* MAPA */
+#maps{
+    background: url(../images/mapa.jpg) no-repeat center/cover;
+    padding: 30px 0px;
+}
+
+.maps-container{
+    width: 100vw;
+    max-width: 1140px;
+    margin: auto;
+}
+
+.maps-content{
+    width: 50%;
+    padding: 30px;
+    background-color: white;
+    color: black;
+}
+
+.maps-adress,
+.maps-adress > span{
+    display: flex;
+    align-items: center;
+}
+
+.maps-adress{
+    margin-bottom: 10px;
+}
+
+.maps-adress > span{
+    justify-content: center;
+    background-color: #aeaeae;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.maps-adress > p{
+    font-size: 0.8rem;
+    color: #4b4b4b;
 }
