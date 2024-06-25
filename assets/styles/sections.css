@@ -3,9 +3,9 @@
 }
 
 .default .section-body{
-    margin: auto;
     max-width: 1140px;
-    width: 100%;
+    width: 90%;
+    margin: auto;
     z-index: 2;
 }
 
@@ -23,16 +23,16 @@
 }
 
 .about-content > p{
-    line-height: 25px;
     margin-bottom: 40px;
+    line-height: 25px;
 }
 
 .about-content > a,
 .ourProject-container > a{
     text-decoration: none;
+    background-color: #B28756;
     color: white;
     font-weight: 600;
-    background-color: #B28756;
     border: 1px solid #B28756;
     border-radius: 30px;
     padding: 15px 55px;
@@ -41,9 +41,9 @@
 
 .about-content > a:hover,
 .ourProject-container > a:hover{
+    background-color: #ffffff00;
     color: black;
     border: 1px solid rgb(0, 0, 0);
-    background-color: #ffffff00;
 }
 
 .about-image img{
@@ -56,17 +56,16 @@
 .section-body .services-container{
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
+    align-items: center;
     gap: 20px;
 }
 
 .services-highlights{
     display: flex;
-    color: white;
     flex-direction: column;
     align-items: center;
-    width: 230px;
-    min-width: 200px;
+    color: white;
+    width: calc(1140px / 4);
     padding: 0px 10px;
 }
 
@@ -99,6 +98,7 @@
     font-size: 0.8rem;
 }
 
+/* OURPROJECT */
 .ourProject-container{
     display: flex;
     flex-flow: column;
@@ -110,8 +110,11 @@
 
 .ourProject-options{
     display: flex;
-    flex-wrap: wrap;
     cursor: pointer;
+    width: 100%;
+    background-color: #f5f3f3;
+    border: 1px solid #ccc;
+    border-radius: 40px;
 }
 
 .ourProject-options:hover > .options:hover{
@@ -124,20 +127,20 @@
 }
 
 .ourProject-options > .options{
-    border: 1px solid #ccc;
+    display: inline-flex;
+    justify-content: center;
+    flex: 1;
+    border-right: 1px solid #ccc;
     padding: 20px 20px;
     transition: all 0.5s ease;
 }
 
-
 .ourProject-options div:first-child{
-    border-radius: 30px 0px 0px 30px;
-    padding-left: 40px;
+    border-left: 0;
 }
 .ourProject-options div:last-child{
-    border-radius: 0px 30px 30px 0px;
-    padding-right: 40px;
-}
+    border-right: 0;
+} 
 
 .ourProject-options > .options > span{
     text-transform: uppercase;
@@ -154,9 +157,14 @@
 
 .ourProject-gallery > .photos{
     position: relative;
-    width: 250px;
-    height: 150px;
+    width: 300px;
+    height: 200px;
     transition: all 1s ease;
+}
+
+.ourProject-gallery > .photos > img{
+    width: 100%;
+    height: 100%;
 }
 
 .ourProject-gallery > .photos > .photo-info{
@@ -390,15 +398,16 @@
 #price{
     background-color: #f7f7f7;
 }
+
 .price-container{
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
     gap: 30px;
 }
 
 .price-card{
-    width: 250px;
+    max-width: 300px;
+    flex: 1;
     background: white;
     padding: 30px;
 }
@@ -483,7 +492,6 @@
 }
 
 .premium-container{
-    flex-wrap: wrap;
     padding-bottom: 50px;
     border-bottom: 1px solid #81818163;
 }
@@ -629,7 +637,7 @@
 
 .social-container{
     padding: 30px;
-    column-gap: 60px;
+    gap: 60px;
 }
 
 .social-share{
@@ -645,7 +653,7 @@
 }
 
 .social-medias{
-    column-gap: 10px;
+    gap: 10px;
 }
 
 .social-medias > .tt,
@@ -698,11 +706,12 @@
 }
 
 .contactus-container form{
-    width: 600px;
+    width: 100%;
 }
 
 .contactus-container form .dados{
-    column-gap: 30px;
+    flex-wrap: wrap;
+    gap: 30px;
     margin-bottom: 40px;
 }
 
@@ -719,6 +728,7 @@ input#iname,
 input#iemail,
 input#isubject,
 input#imessage{
+    min-width: 300px;
     padding: 15px 0px;
     border: 0;
     border-bottom: 2px solid #aeaeae;
@@ -793,30 +803,35 @@ input::placeholder{
     color: #4b4b4b;
 }
 
-@media (width <= 768px){
-    .section-body .about-container{
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        row-gap: 50px;
-    }
-    div.about-image{
-        order: -1;
-    }
-    .services-highlights:nth-child(1),
-    .services-highlights:nth-child(2),
-    .services-highlights:nth-child(3){
-        border: 0;
-    }
-}
+
 
 @media (width > 375px) and (width <= 425px){
 
 }
 
-@media (width > 425px) and (width <= 768px){
+@media (width > 475px) and (width <= 768px){
+    .price-card{
+        min-width: 50%;
+    }
+    .section-ourteam{
+        max-width: 600px;
+    }
+    .premium-container{
+        flex-wrap: wrap;
+        row-gap: 50px;
+    }
+    .premium-container .img,
+    .premium-container .premium-content{
+        min-width: 350px;
+    }
+    .services-highlights:nth-child(2){
+        border: 0;
+    }
+    .services-container{
+        flex-wrap: wrap;
+    }
     .services-highlights{
-        width: 250px;
+        width: calc(80% / 2);
     }
     .ourteam-slider .slide:nth-child(3){
         display: none;
@@ -838,5 +853,51 @@ input::placeholder{
     }
     .maps-content{
         width: 70%;
+    }
+    .colab-container img:nth-child(1),
+    .colab-container img:nth-child(2){
+        display: none;
+    }
+    .ourProject-options{
+        flex-wrap: wrap;
+    }
+    .ourProject-options .options{
+        min-width: 30%;
+    }
+
+    .ourProject-options .options:nth-child(1),
+    .ourProject-options .options:nth-child(2),
+    .ourProject-options .options:nth-child(3){
+        border-bottom: 1px solid #ccc;
+    }
+    
+    .ourProject-options .options:nth-child(3){
+        border-right: 0;
+    }
+    .ourProject-gallery .photos{
+        width: 250px;
+        height: 150px;
+    }
+    .social-container,
+    .social-medias{
+        flex-wrap: wrap;
+    }
+}
+
+@media (width <= 850px){
+    .section-body .about-container{
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        row-gap: 50px;
+    }
+    div.about-image{
+        order: -1;
+    }
+}
+
+@media (width <= 1024px){
+    .price-container{
+        flex-wrap: wrap;
     }
 }
