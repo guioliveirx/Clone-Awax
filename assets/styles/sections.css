@@ -1,5 +1,6 @@
 *{
     box-sizing: border-box;
+    font-family: 'Montserrat';
 }
 
 .default .section-body{
@@ -805,34 +806,35 @@ input::placeholder{
 }
 
 @media (width <= 380px){
-
-}
-
-@media (width > 380px) and (width <= 475px){
     .hero-slider h1{
-        font-size: 2.5rem;
+        font-size: 2.3rem;
     }
     .hero-slider h2{
+        font-size: 0.9rem;
+    }
+    .hero-slider button{
         font-size: 1rem;
     }
     .about-image img{
-        width: 100%;
+        width: 300px;
+        height: 200px;
     }
     .section-body .about-container{
         padding: 0;
     }
-
+    .about-content > p{
+        font-size: 0.9rem;
+    }
     .services-highlights > h2{
-        font-size: 1.3rem;
+        font-size: 1.2rem;
     }
     .services-highlights > p{
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
     .ourProject-gallery .photos{
         width: 300px;
         height: 200px;
     }
-
     .ourProject-gallery .photos:nth-child(1),
     .ourProject-gallery .photos:nth-child(2),
     .ourProject-gallery .photos:nth-child(3),
@@ -840,17 +842,13 @@ input::placeholder{
     .ourProject-gallery .photos:nth-child(5){
         display: none;
     }
-
     #maps{
         padding-top: 0;
         height: calc(2 * 260px);
     }
-
     .maps-content{
         width: 100%;
     }
-
-
     .section-ourteam{
         max-width: 300px;
     }
@@ -860,17 +858,14 @@ input::placeholder{
     .ourProject-options .options{
         min-width: 30%;
     }
-
     .ourProject-options .options:nth-child(1),
     .ourProject-options .options:nth-child(2),
     .ourProject-options .options:nth-child(3){
         border-bottom: 1px solid #ccc;
     }
-    
     .ourProject-options .options:nth-child(3){
         border-right: 0;
     }
-    
     .colab-container img:nth-child(1),
     .colab-container img:nth-child(2),
     .colab-container img:nth-child(3){
@@ -898,6 +893,101 @@ input::placeholder{
     .services-highlights:nth-child(2), 
     .services-highlights:nth-child(3) {
         border-right: 0px solid #cccccc49;
+    }
+    .menu-hamburguer{
+        left: 30%;
+    }
+    .menu-hamburguer > a{
+        font-size: 0.9rem;
+        margin-bottom: 20px;
+    }
+}
+
+@media (width > 380px) and (width <= 475px){
+    .hero-slider h1{
+        font-size: 2.5rem;
+    }
+    .hero-slider h2{
+        font-size: 1rem;
+    }
+    .about-image img{
+        width: 100%;
+    }
+    .section-body .about-container{
+        padding: 0;
+    }
+    .services-highlights > h2{
+        font-size: 1.3rem;
+    }
+    .services-highlights > p{
+        font-size: 1rem;
+    }
+    .ourProject-gallery .photos{
+        width: 300px;
+        height: 200px;
+    }
+    .ourProject-gallery .photos:nth-child(1),
+    .ourProject-gallery .photos:nth-child(2),
+    .ourProject-gallery .photos:nth-child(3),
+    .ourProject-gallery .photos:nth-child(4),
+    .ourProject-gallery .photos:nth-child(5){
+        display: none;
+    }
+    #maps{
+        padding-top: 0;
+        height: calc(2 * 260px);
+    }
+    .maps-content{
+        width: 100%;
+    }
+    .section-ourteam{
+        max-width: 300px;
+    }
+    .ourProject-options{
+        flex-wrap: wrap;
+    }
+    .ourProject-options .options{
+        min-width: 30%;
+    }
+    .ourProject-options .options:nth-child(1),
+    .ourProject-options .options:nth-child(2),
+    .ourProject-options .options:nth-child(3){
+        border-bottom: 1px solid #ccc;
+    }
+    .ourProject-options .options:nth-child(3){
+        border-right: 0;
+    }
+    .colab-container img:nth-child(1),
+    .colab-container img:nth-child(2),
+    .colab-container img:nth-child(3){
+        display: none;
+    }
+    .premium-container{
+        flex-wrap: wrap;
+        row-gap: 50px;
+    }
+    .premium-container .img,
+    .premium-container .premium-content{
+        min-width: 350px;
+    }
+    .social-container,
+    .social-medias{
+        flex-wrap: wrap;
+    }
+    .services-container{
+        flex-wrap: wrap;
+    }
+    .services-highlights{
+        width: 80%
+    }
+    .services-highlights:nth-child(1), 
+    .services-highlights:nth-child(2), 
+    .services-highlights:nth-child(3) {
+        border-right: 0px solid #cccccc49;
+    }
+    .menu-hamburguer > a{
+        font-size: 1rem;
+        margin-bottom: 20px;
     }
 }
 
@@ -956,13 +1046,11 @@ input::placeholder{
     .ourProject-options .options{
         min-width: 30%;
     }
-
     .ourProject-options .options:nth-child(1),
     .ourProject-options .options:nth-child(2),
     .ourProject-options .options:nth-child(3){
         border-bottom: 1px solid #ccc;
     }
-    
     .ourProject-options .options:nth-child(3){
         border-right: 0;
     }
