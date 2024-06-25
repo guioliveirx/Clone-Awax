@@ -57,7 +57,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 30px;
 }
 
 .services-highlights{
@@ -762,6 +762,7 @@ input::placeholder{
 
 /* MAPA */
 #maps{
+    position: relative;
     background: url(../images/mapa.jpg) no-repeat center/cover;
     padding: 30px 0px;
 }
@@ -803,10 +804,101 @@ input::placeholder{
     color: #4b4b4b;
 }
 
+@media (width <= 380px){
+
+}
+
+@media (width > 380px) and (width <= 475px){
+    .hero-slider h1{
+        font-size: 2.5rem;
+    }
+    .hero-slider h2{
+        font-size: 1rem;
+    }
+    .about-image img{
+        width: 100%;
+    }
+    .section-body .about-container{
+        padding: 0;
+    }
+
+    .services-highlights > h2{
+        font-size: 1.3rem;
+    }
+    .services-highlights > p{
+        font-size: 1rem;
+    }
+    .ourProject-gallery .photos{
+        width: 300px;
+        height: 200px;
+    }
+
+    .ourProject-gallery .photos:nth-child(1),
+    .ourProject-gallery .photos:nth-child(2),
+    .ourProject-gallery .photos:nth-child(3),
+    .ourProject-gallery .photos:nth-child(4),
+    .ourProject-gallery .photos:nth-child(5){
+        display: none;
+    }
+
+    #maps{
+        padding-top: 0;
+        height: calc(2 * 260px);
+    }
+
+    .maps-content{
+        width: 100%;
+    }
 
 
-@media (width > 375px) and (width <= 425px){
+    .section-ourteam{
+        max-width: 300px;
+    }
+    .ourProject-options{
+        flex-wrap: wrap;
+    }
+    .ourProject-options .options{
+        min-width: 30%;
+    }
 
+    .ourProject-options .options:nth-child(1),
+    .ourProject-options .options:nth-child(2),
+    .ourProject-options .options:nth-child(3){
+        border-bottom: 1px solid #ccc;
+    }
+    
+    .ourProject-options .options:nth-child(3){
+        border-right: 0;
+    }
+    
+    .colab-container img:nth-child(1),
+    .colab-container img:nth-child(2),
+    .colab-container img:nth-child(3){
+        display: none;
+    }
+    .premium-container{
+        flex-wrap: wrap;
+        row-gap: 50px;
+    }
+    .premium-container .img,
+    .premium-container .premium-content{
+        min-width: 350px;
+    }
+    .social-container,
+    .social-medias{
+        flex-wrap: wrap;
+    }
+    .services-container{
+        flex-wrap: wrap;
+    }
+    .services-highlights{
+        width: 80%
+    }
+    .services-highlights:nth-child(1), 
+    .services-highlights:nth-child(2), 
+    .services-highlights:nth-child(3) {
+        border-right: 0px solid #cccccc49;
+    }
 }
 
 @media (width > 475px) and (width <= 768px){
